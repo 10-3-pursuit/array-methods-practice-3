@@ -75,61 +75,97 @@ const pokemons = [
  * Creates an array containing only the names of the Pokémon.
  * @returns {string[]} An array of Pokémon names.
  */
-const pokemonNames = () => {};
+
+const pokemonNames = pokemons.map((pokemon) => pokemon.name);
+console.log(pokemonNames);
 
 /**
  * Finds all water type Pokémon.
  * @returns {Object[]} An array of water type Pokémon.
  */
-const waterTypePokemons = () => {};
+const waterTypePokemons = pokemons.filter((pokemon) =>
+  pokemon.description.includes("water")
+);
 
 /**
  * Finds a Pokémon with a specific ID.
  * @param {number} id - The ID of the Pokémon to find.
  * @returns {Object|null} The Pokémon object if found, otherwise null.
  */
-const findPokemonById = () => {};
+const findPokemonById = (id) => pokemons.find((pokemon) => pokemon.id === id);
 
 /**
  * Counts how many Pokémon have the move 'Tackle'.
  * @returns {number} The count of Pokémon with 'Tackle' move.
  */
-const countTackleMove = () => {};
+const countTackleMove = pokemons.reduce(
+  (count, pokemon) => (pokemon.moves.includes("Tackle") ? count + 1 : count),
+  0
+);
+
 /**
  * Creates an array of all unique moves.
  * @returns {string[]} An array of unique Pokémon moves.
  */
-const allMoves = () => {};
+const allMoves = [...new Set(pokemons.flatMap((pokemon) => pokemon.moves))];
+
 /**
  * Filters Pokémon that have the move 'Growl'.
  * @returns {Object[]} An array of Pokémon with 'Growl' move.
  */
-const pokemonWithGrowl = () => {};
+const pokemonWithGrowl = pokemons.filter((pokemon) =>
+  pokemon.moves.includes("Growl")
+);
+
 /**
  * Finds the first Pokémon with the move 'Water Gun'.
  * @returns {Object|null} The first Pokémon with 'Water Gun' move, or null if not found.
  */
-const firstWaterGunPokemon = () => {};
+const firstWaterGunPokemon = pokemons.find((pokemon) =>
+  pokemon.moves.includes("Water Gun")
+);
+
 /**
  * Creates an array of URLs of the Pokémon images.
  * @returns {string[]} An array of image URLs.
  */
-const pokemonImages = () => {};
+const pokemonImages = pokemons.map((pokemon) => pokemon.image);
 
 /**
  * Creates an object grouping Pokémon by their type.
  * @returns {Object} An object with keys as types and values as arrays of Pokémon.
  */
-const groupByType = () => {};
+const groupByType = pokemons.reduce((group, pokemon) => {
+  const type = pokemon.description.split(" ")[2];
+  group[type] = group[type] || [];
+  group[type].push(pokemon);
+  return group;
+}, {});
 
 /**
  * Calculates the average ID of all Pokémon.
  * @returns {number} The average ID.
  */
-const averageId = () => {};
+const averageId =
+  pokemons.reduce((total, pokemon) => total + pokemon.id, 0) / pokemons.length;
+
 /**
  * Finds the index of a Pokémon in the array based on its name.
  * @param {string} name - The name of the Pokémon to find.
  * @returns {number} The index of the Pokémon in the array, or -1 if not found.
  */
 const findPokemonIndexByName = () => {};
+
+module.exports = {
+  pokemonNames,
+  pokemonImages,
+  pokemonWithGrowl,
+  waterTypePokemons,
+  findPokemonById,
+  findPokemonIndexByName,
+  countTackleMove,
+  allMoves,
+  firstWaterGunPokemon,
+  groupByType,
+  averageId,
+};
