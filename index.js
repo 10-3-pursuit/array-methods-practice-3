@@ -127,9 +127,3 @@ const groupByType = () => {};
  * @returns {number} The average ID.
  */
 const averageId = () => {};
-/**
- * Finds the index of a Pokémon in the array based on its name.
- * @param {string} name - The name of the Pokémon to find.
- * @returns {number} The index of the Pokémon in the array, or -1 if not found.
- */
-const findPokemonIndexByName = () => {};
