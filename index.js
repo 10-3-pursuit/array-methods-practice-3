@@ -132,29 +132,11 @@ const firstWaterGunPokemon = pokemons.find((pokemon) =>
 const pokemonImages = pokemons.map((pokemon) => pokemon.image);
 
 /**
- * Creates an object grouping Pokémon by their type.
- * @returns {Object} An object with keys as types and values as arrays of Pokémon.
- */
-const groupByType = pokemons.reduce((group, pokemon) => {
-  const type = pokemon.description.split(" ")[2];
-  group[type] = group[type] || [];
-  group[type].push(pokemon);
-  return group;
-}, {});
-
-/**
  * Calculates the average ID of all Pokémon.
  * @returns {number} The average ID.
  */
 const averageId =
   pokemons.reduce((total, pokemon) => total + pokemon.id, 0) / pokemons.length;
-
-/**
- * Finds the index of a Pokémon in the array based on its name.
- * @param {string} name - The name of the Pokémon to find.
- * @returns {number} The index of the Pokémon in the array, or -1 if not found.
- */
-const findPokemonIndexByName = () => {};
 
 module.exports = {
   pokemonNames,
@@ -162,10 +144,8 @@ module.exports = {
   pokemonWithGrowl,
   waterTypePokemons,
   findPokemonById,
-  findPokemonIndexByName,
   countTackleMove,
   allMoves,
   firstWaterGunPokemon,
-  groupByType,
   averageId,
 };

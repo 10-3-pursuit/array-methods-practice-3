@@ -88,10 +88,3 @@ describe("pokemonImages", () => {
     expect(pokemonImages).toHaveLength(10);
   });
 });
-
-describe("groupByType", () => {
-  test("should not include incorrect types", () => {
-    const grouped = groupByType;
-    expect(Object.keys(grouped)).not.toContain("unknown");
-  });
-});
