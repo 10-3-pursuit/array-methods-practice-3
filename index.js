@@ -1,3 +1,76 @@
+const pokemons = [
+  {
+    id: 1,
+    name: "Bulbasaur",
+    image: "http://example.com/bulbasaur.png",
+    description: "A grass type Pokémon.",
+    moves: ["Tackle", "Growl", "Vine Whip"],
+  },
+  {
+    id: 2,
+    name: "Charmander",
+    image: "http://example.com/charmander.png",
+    description: "A fire type Pokémon.",
+    moves: ["Scratch", "Growl", "Ember"],
+  },
+  {
+    id: 3,
+    name: "Squirtle",
+    image: "http://example.com/squirtle.png",
+    description: "A water type Pokémon.",
+    moves: ["Tackle", "Tail Whip", "Water Gun"],
+  },
+  {
+    id: 4,
+    name: "Pikachu",
+    image: "http://example.com/pikachu.png",
+    description: "An electric type Pokémon.",
+    moves: ["Quick Attack", "Growl", "Thunder Shock"],
+  },
+  {
+    id: 5,
+    name: "Jigglypuff",
+    image: "http://example.com/jigglypuff.png",
+    description: "A fairy type Pokémon.",
+    moves: ["Sing", "Pound", "Growl"],
+  },
+  {
+    id: 6,
+    name: "Meowth",
+    image: "http://example.com/meowth.png",
+    description: "A normal type Pokémon.",
+    moves: ["Scratch", "Growl", "Bite"],
+  },
+  {
+    id: 7,
+    name: "Psyduck",
+    image: "http://example.com/psyduck.png",
+    description: "A water type Pokémon.",
+    moves: ["Scratch", "Tail Whip", "Water Gun"],
+  },
+  {
+    id: 8,
+    name: "Eevee",
+    image: "http://example.com/eevee.png",
+    description: "A normal type Pokémon.",
+    moves: ["Tackle", "Tail Whip", "Quick Attack"],
+  },
+  {
+    id: 9,
+    name: "Snorlax",
+    image: "http://example.com/snorlax.png",
+    description: "A normal type Pokémon.",
+    moves: ["Tackle", "Amnesia", "Rest"],
+  },
+  {
+    id: 10,
+    name: "Dragonite",
+    image: "http://example.com/dragonite.png",
+    description: "A dragon type Pokémon.",
+    moves: ["Wrap", "Leer", "Thunder Wave"],
+  },
+];
+
 /**
  * Creates an array containing only the names of the Pokémon.
  * @returns {string[]} An array of Pokémon names.
