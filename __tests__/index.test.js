@@ -4,7 +4,6 @@ const {
   pokemonWithGrowl,
   waterTypePokemons,
   findPokemonById,
-  findPokemonIndexByName,
   countTackleMove,
   allMoves,
   firstWaterGunPokemon,

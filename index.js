@@ -127,3 +127,16 @@ const groupByType = () => {};
  * @returns {number} The average ID.
  */
 const averageId = () => {};
+
+module.exports = {
+  pokemonNames,
+  pokemonImages,
+  pokemonWithGrowl,
+  waterTypePokemons,
+  findPokemonById,
+  countTackleMove,
+  allMoves,
+  firstWaterGunPokemon,
+  groupByType,
+  averageId,
+};
