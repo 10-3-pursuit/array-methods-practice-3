@@ -7,7 +7,6 @@ const {
   countTackleMove,
   allMoves,
   firstWaterGunPokemon,
-  groupByType,
   averageId,
 } = require("../");
 
@@ -85,12 +84,5 @@ describe("firstWaterGunPokemon", () => {
 describe("pokemonImages", () => {
   test("should have the correct length", () => {
     expect(pokemonImages).toHaveLength(10);
-  });
-});
-
-describe("groupByType", () => {
-  test("should not include incorrect types", () => {
-    const grouped = groupByType;
-    expect(Object.keys(grouped)).not.toContain("unknown");
   });
 });

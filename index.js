@@ -117,12 +117,6 @@ const firstWaterGunPokemon = () => {};
 const pokemonImages = () => {};
 
 /**
- * Creates an object grouping Pokémon by their type.
- * @returns {Object} An object with keys as types and values as arrays of Pokémon.
- */
-const groupByType = () => {};
-
-/**
  * Calculates the average ID of all Pokémon.
  * @returns {number} The average ID.
  */
@@ -137,6 +131,5 @@ module.exports = {
   countTackleMove,
   allMoves,
   firstWaterGunPokemon,
-  groupByType,
   averageId,
 };
